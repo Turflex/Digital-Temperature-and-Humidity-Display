@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Govind G Nair",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 135, "left": 210.6, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -124.5,
+      "left": 599.4,
+      "attrs": { "temperature": "33.2", "humidity": "81" }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -140.57, "left": 217.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "dht1:VCC", "uno:5V", "red", [ "v345.6", "h-240" ] ],
+    [ "dht1:GND", "uno:GND.2", "black", [ "v355.2", "h-249.6" ] ],
+    [ "lcd1:VSS", "uno:GND.1", "green", [ "v57.6", "h86.4" ] ],
+    [ "lcd1:VDD", "uno:5V", "gold", [ "v38.4", "h-95.9", "v336", "h211.2", "v-86.4" ] ],
+    [ "lcd1:RS", "uno:12", "green", [ "v28.8", "h67.5" ] ],
+    [ "lcd1:RW", "uno:GND.1", "green", [ "v76.8", "h-0.1" ] ],
+    [ "lcd1:E", "uno:11", "green", [ "v48", "h76.8" ] ],
+    [ "lcd1:D4", "uno:5", "green", [ "v19.2", "h76.8" ] ],
+    [ "lcd1:D5", "uno:4", "green", [ "v9.6", "h76.9" ] ],
+    [ "lcd1:D6", "uno:3", "green", [ "v38.4", "h86.6", "v67.2" ] ],
+    [ "lcd1:D7", "uno:2", "green", [ "v67.2", "h96.3" ] ],
+    [ "lcd1:A", "uno:5V", "green", [ "v19.2", "h-297.7", "v403.2", "h307.2" ] ],
+    [ "lcd1:K", "uno:GND.3", "green", [ "v28.8", "h144", "v288", "h-134.4" ] ],
+    [ "dht1:SDA", "uno:8", "green", [ "v76.8", "h-230.3", "v28.8" ] ]
+  ],
+  "dependencies": {}
+}
